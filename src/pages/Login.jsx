@@ -2,6 +2,7 @@ import Input from '../components/Input';
 import Button from '../components/‌Button';
 import GlassCard from '../components/GlassCard';
 import { Mail, Lock } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 
 export default function Login() {
@@ -23,7 +24,7 @@ export default function Login() {
 
         {/* Footer link */}
         <p className="mt-4 text-white/80 text-sm">
-          Don’t have an account? <span className="underline">Sign up</span>
+          Don’t have an account? <Link to='/signup' className="underline">Sign up</Link>
         </p>
       </GlassCard>
     </div>

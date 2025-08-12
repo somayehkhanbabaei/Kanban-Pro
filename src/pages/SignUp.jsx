@@ -3,6 +3,7 @@ import Input from "../components/Input";
 import Button from "../components/‌Button";
 import GlassCard from "../components/GlassCard";
 import { User, Mail, Lock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 export default function SignUp() {
@@ -30,7 +31,7 @@ export default function SignUp() {
 
         {/* Footer link */}
         <p className="mt-4 text-white/80 text-sm">
-          Already have an account? <span className="underline">Sign in</span>
+          Already have an account? <Link to='/login' className="underline">Sign in</Link>
         </p>
       </GlassCard>
     </div>

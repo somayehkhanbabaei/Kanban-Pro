@@ -1,10 +1,14 @@
 
+import { Navigate, Route, Routes } from "react-router-dom";
 import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
 
 export default function App() {
   return (
-    <>
-      <SignUp/>
-    </>
+    <Routes>
+      <Route path="/" element={<Navigate to='login' replace />} />
+      <Route path="/login" element={<Login/>} />
+      <Route path="/signup" element={<SignUp/>}/>
+    </Routes>
   );
 }
