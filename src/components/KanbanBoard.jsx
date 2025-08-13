@@ -41,7 +41,7 @@ function TaskCard({ title, description, tag, due }) {
   );
 }
 
-export default function KanbanBoard() {
+export default function KanbanBoard({onAddTask}) {
   // demo data (UI only)
   const data = {
     todo: [
@@ -103,7 +103,7 @@ export default function KanbanBoard() {
                 type="button"
                 className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-md
                            bg-white/10 text-white hover:bg-white/15 transition"
-                onClick={() => {}}
+                onClick={() => onAddTask()}
               >
                 <Plus size={14} /> Add
               </button>

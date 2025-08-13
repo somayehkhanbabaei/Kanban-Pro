@@ -1,6 +1,6 @@
 import React from "react";
-import Input from "./../components/Input";
-import Button from "./../components/Button";
+import Input from "./Input";
+import Button from "./‌Button";
 import { FileText, Users, Calendar as Cal } from "lucide-react";
 
 export default function AddProjectForm() {
