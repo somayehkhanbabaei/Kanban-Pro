@@ -24,9 +24,9 @@ export default function AddTaskModal({ isOpen, onClose }) {
             <label className="block mb-1 text-sm font-medium">Description</label>
             <textarea
               placeholder="Enter task description"
-              className="w-full p-2 rounded bg-white/20 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full p-2 rounded bg-white/20 focus:outline-none focus:ring-2 focus:ring-purple-400">
               rows="3"
-            ></textarea>
+            </textarea>
           </div>
 
           {/* Status Dropdown */}
