@@ -1,13 +1,15 @@
 // src/components/Sidebar.jsx
-import { LayoutDashboard, FolderKanban, CheckSquare, Calendar, Folder, Settings } from "lucide-react";
+import { LayoutDashboard, FolderKanban, CheckSquare, Calendar, Folder, Settings, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navItems = [
-  { icon: LayoutDashboard, label: "Dashboard" },
-  { icon: FolderKanban,    label: "Projects" },
-  { icon: CheckSquare,     label: "Tasks" },
-  { icon: Calendar,        label: "Calendar" },
-  { icon: Folder,          label: "Files" },
-  { icon: Settings,        label: "Settings" },
+  { icon: LayoutDashboard, label: "Dashboard", to: "/dashboard" },
+  { icon: FolderKanban,    label: "Projects",  to: "#" },
+  { icon: CheckSquare,     label: "Tasks",     to: "#" },
+  { icon: Calendar,        label: "Calendar",  to: "#" },
+  { icon: Folder,          label: "Files",     to: "#" },
+  { icon: User,            label: "Profile",   to: "/profile" },
+  { icon: Settings,        label: "Settings",  to: "#" },
 ];
 
 export default function Sidebar({ open, onClose }) {
@@ -36,15 +38,16 @@ export default function Sidebar({ open, onClose }) {
         </div>
 
         <nav className="p-3 space-y-1">
-          {navItems.map(({ icon: Icon, label }) => (
-            <button
+          {navItems.map(({ icon: Icon, label, to="#" }) => (
+            <Link
               key={label}
+              to={to}
               className="w-full flex items-center gap-3 px-3 py-2 rounded-lg
                          text-white/90 hover:bg-white/10 transition"
             >
               <Icon className="w-5 h-5" />
               <span>{label}</span>
-            </button>
+            </Link>
           ))}
         </nav>
       </aside>
