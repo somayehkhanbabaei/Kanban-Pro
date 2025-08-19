@@ -1,6 +1,6 @@
 import GlassCard from '../components/GlassCard';
 import Input from '../components/Input';
-import Button from '../components/‌Button';
+import ButtonLayout from '../components/‌ButtonLayout';
 
 export default function Profile() {
     return(
@@ -34,7 +34,7 @@ export default function Profile() {
                 </div>
 
                 {/* Save button */}
-                <Button>Save changes</Button>
+                <ButtonLayout>Save changes</ButtonLayout>
                 </form>
             </GlassCard>
         </div>

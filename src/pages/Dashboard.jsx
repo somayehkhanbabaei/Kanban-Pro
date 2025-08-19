@@ -4,7 +4,6 @@ import Sidebar from "../components/Sidebar";
 import { FolderKanban, CheckSquare, MessageSquare, Calendar, ListChecks, Clock4, CheckCircle2, Users } from "lucide-react";
 import ProjectCard from "../components/ProjectCard";
 import TaskItem from "../components/TaskItem";
-import ActivityItem from "../components/ActivityItem";
 import TasksChart from "../components/TasksChart";
 import ActivityTimeline from "../components/ActivityTimeline";
 import StatsCards from "../components/StatsCards";
@@ -14,6 +13,7 @@ import AddProjectForm from '../components/AddProjectForm';
 import AddTaskForm from '../components/AddTaskForm';
 import AddTaskModal from "../components/AddTaskModal";
 import AddProjectModal from "../components/AddProjectModal";
+import { Link } from "react-router-dom";
 
 
 export default function Dashboard() {
@@ -131,7 +131,14 @@ export default function Dashboard() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {projects.map((p, idx) => (
-                  <ProjectCard key={idx} {...p} />
+                  <Link
+                    key={idx}
+                    to={`/projects/${idx}`}
+                    state={{project: p}}
+                    className="block"
+                    >
+                      <ProjectCard {...p} />
+                  </Link>
                 ))}
               </div>
             </section>

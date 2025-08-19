@@ -1,4 +1,3 @@
-// src/components/TasksChart.jsx
 import {
   BarChart,
   Bar,

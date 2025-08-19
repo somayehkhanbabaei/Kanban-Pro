@@ -1,5 +1,5 @@
-// src/components/Button.jsx
-export default function Button({ children, type = "button", onClick }) {
+
+export default function ButtonLayout({ children, type = "button", onClick }) {
     return (
       // Gradient button (purple → teal) with focus ring
       <button

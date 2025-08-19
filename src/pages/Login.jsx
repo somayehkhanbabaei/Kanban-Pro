@@ -1,5 +1,5 @@
 import Input from '../components/Input';
-import Button from '../components/‌Button';
+import ButtonLayout from '../components/‌ButtonLayout';
 import GlassCard from '../components/GlassCard';
 import { Mail, Lock } from "lucide-react";
 import { Link } from 'react-router-dom';
@@ -19,7 +19,7 @@ export default function Login() {
         <form className="space-y-4">
           <Input type="email" placeholder="Email address" icon={Mail} />
           <Input type="password" placeholder="Password" icon={Lock} />
-          <Button>Sign in</Button>
+          <ButtonLayout>Sign in</ButtonLayout>
         </form>
 
         {/* Footer link */}

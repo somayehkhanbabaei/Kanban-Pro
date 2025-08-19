@@ -3,7 +3,8 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
-import Profile from "./pages/Profie";
+import Profile from "./pages/Profile";
+import ProjectDetails from "./pages/ProjectDetails";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Route path="/signup" element={<SignUp/>}/>
       <Route path="/dashboard" element={<Dashboard/>} />
       <Route path="/profile" element={<Profile/>} />
+      <Route path="/projects/:id" element={<ProjectDetails/>} />
     </Routes>
   );
 }

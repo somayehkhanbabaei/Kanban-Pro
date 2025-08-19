@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "./Input";
-import Button from "./‌Button";
+import ButtonLayout from "./‌ButtonLayout";
 import { ListChecks, Tag, Calendar as Cal } from "lucide-react";
 
 export default function AddTaskForm() {
@@ -17,7 +17,7 @@ export default function AddTaskForm() {
 
       {/* Actions */}
       <div className="flex gap-2">
-        <Button type="submit">Add Task</Button>
+        <ButtonLayout type="submit">Add Task</ButtonLayout>
       </div>
     </form>
   );

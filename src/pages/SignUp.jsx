@@ -1,6 +1,6 @@
 // src/pages/SignUp.jsx
 import Input from "../components/Input";
-import Button from "../components/‌Button";
+import ButtonLayout from "../components/‌ButtonLayout";
 import GlassCard from "../components/GlassCard";
 import { User, Mail, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -26,7 +26,7 @@ export default function SignUp() {
           <Input type="password" placeholder="Password" icon={Lock}/>
 
           {/* Submit */}
-          <Button>Sign up</Button>
+          <ButtonLayout>Sign up</ButtonLayout>
         </form>
 
         {/* Footer link */}

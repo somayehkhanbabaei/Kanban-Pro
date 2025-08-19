@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "./Input";
-import Button from "./‌Button";
+import ButtonLayout from "./‌ButtonLayout";
 import { FileText, Users, Calendar as Cal } from "lucide-react";
 
 export default function AddProjectForm() {
@@ -21,7 +21,7 @@ export default function AddProjectForm() {
 
       {/* Actions */}
       <div className="flex gap-2">
-        <Button type="submit">Create Project</Button>
+        <ButtonLayout type="submit">Create Project</ButtonLayout>
       </div>
     </form>
   );
