@@ -1,15 +1,23 @@
 // src/components/Sidebar.jsx
-import { LayoutDashboard, FolderKanban, CheckSquare, Calendar, Folder, Settings, User } from "lucide-react";
+import {
+  LayoutDashboard,
+  FolderKanban,
+  CheckSquare,
+  Calendar,
+  Folder,
+  Settings,
+  User,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const navItems = [
   { icon: LayoutDashboard, label: "Dashboard", to: "/dashboard" },
-  { icon: FolderKanban,    label: "Projects",  to: "#" },
-  { icon: CheckSquare,     label: "Tasks",     to: "#" },
-  { icon: Calendar,        label: "Calendar",  to: "#" },
-  { icon: Folder,          label: "Files",     to: "#" },
-  { icon: User,            label: "Profile",   to: "/profile" },
-  { icon: Settings,        label: "Settings",  to: "#" },
+  { icon: FolderKanban, label: "Projects", to: "/dashboard" },
+  { icon: CheckSquare, label: "Tasks", to: "/tasks" },
+  { icon: Calendar, label: "Calendar", to: "/calendar" },
+  { icon: Folder, label: "Files", to: "/files" },
+  { icon: User, label: "Profile", to: "/profile" },
+  { icon: Settings, label: "Settings", to: "/settings" },
 ];
 
 export default function Sidebar({ open, onClose }) {
@@ -32,13 +40,13 @@ export default function Sidebar({ open, onClose }) {
           ${open ? "translate-x-0" : "-translate-x-full"}
           md:translate-x-0
         `}
->
+      >
         <div className="h-14 flex items-center px-4 border-b border-white/10">
           <span className="text-white font-semibold">Navigation</span>
         </div>
 
         <nav className="p-3 space-y-1">
-          {navItems.map(({ icon: Icon, label, to="#" }) => (
+          {navItems.map(({ icon: Icon, label, to }) => (
             <Link
               key={label}
               to={to}
