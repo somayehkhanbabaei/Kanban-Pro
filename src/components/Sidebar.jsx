@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const navItems = [
   { icon: LayoutDashboard, label: "Dashboard", to: "/dashboard" },
-  { icon: FolderKanban, label: "Projects", to: "/dashboard" },
+  { icon: FolderKanban, label: "Projects", to: "/projects" },
   { icon: CheckSquare, label: "Tasks", to: "/tasks" },
   { icon: Calendar, label: "Calendar", to: "/calendar" },
   { icon: Folder, label: "Files", to: "/files" },
